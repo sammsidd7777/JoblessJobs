@@ -10,7 +10,7 @@ export const savedJobsApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: `${API_URL}`,
     credentials: "include",
-  }),
+  }), 
   tagTypes: ["SavedJobs"],
   endpoints: (builder) => ({
     getSavedJobs: builder.query({
