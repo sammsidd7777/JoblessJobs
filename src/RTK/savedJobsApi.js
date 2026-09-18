@@ -14,13 +14,13 @@ export const savedJobsApi = createApi({
   tagTypes: ["SavedJobs"],
   endpoints: (builder) => ({
     getSavedJobs: builder.query({
-      query: () => "/saved-jobs",
+      query: () => "/jobs/saved-jobs",
       providesTags: ["SavedJobs"], // ✅ Uncommented so cache is tracked
     }),
 
     deleteSavedJob: builder.mutation({
       query: (id) => ({
-        url: `/saved-jobs/${id}`,
+        url: `/jobs/saved-jobs/${id}`,
         method: "DELETE",
       }),
       invalidatesTags: ["SavedJobs"],
@@ -28,7 +28,7 @@ export const savedJobsApi = createApi({
     
     savedJob :builder.mutation({
         query:(id) =>({
-            url:`/saved-jobs/${id}`,
+            url:`/jobs/saved-jobs/${id}`,
             method:"POST",
         }),
         invalidatesTags: ["SavedJobs"], // ✅ Added to trigger UI refetch
