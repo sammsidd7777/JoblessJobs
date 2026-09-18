@@ -1,10 +1,15 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
+
+const API_URL =
+  import.meta.env.VITE_API_URL ||
+  "http://localhost:5000";
+  
 export const CompanyService = createApi({
   reducerPath: "CompanyService",
 
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:5000/", // ✅ backend base URL
+    baseUrl: `${API_URL}`, // ✅ backend base URL
     credentials: "include", // ✅ send and receive cookies (JWT sessions)
   }),
 

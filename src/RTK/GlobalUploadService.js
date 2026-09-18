@@ -1,10 +1,15 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
+
+const API_URL =
+  import.meta.env.VITE_API_URL ||
+  "http://localhost:5000";
+
 export const GlobalUploadService = createApi({
   reducerPath: "GlobalUploadService",
 
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:5000/",
+    baseUrl: `${API_URL}`,
     credentials: "include",
   }),
 
