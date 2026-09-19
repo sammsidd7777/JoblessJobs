@@ -775,30 +775,27 @@ const FindJob = () => {
      SAVE JOB
   ======================================================= */
 
-  const handleSaveJob = async (id) => {
-    if (!id) return;
+const handleSaveJob = async (id) => {
+  if (!id) return;
 
-    try {
-      setSavingJobId(id);
-      setMessage("Saving job...");
-      setToastType("info");
+  try {
+    setSavingJobId(id);
 
-      await savedJob(id).unwrap();
+    await savedJob(id).unwrap();
 
-      setMessage(
-        "Job saved successfully"
-      );
-      setToastType("success");
-    } catch (error) {
-      setMessage(
-        error?.data?.message ||
-        "Please login to save this job"
-      );
-      setToastType("error")
-    } finally {
-      setSavingJobId(null);
-    }
-  };
+    setMessage("Job saved successfully");
+    setToastType("success");
+
+  } catch (error) {
+    setMessage(
+      error?.data?.message || "Please login to save this job"
+    );
+    setToastType("error");
+
+  } finally {
+    setSavingJobId(null);
+  }
+};
 
   /* =======================================================
      CURSOR
