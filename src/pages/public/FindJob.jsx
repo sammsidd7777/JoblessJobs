@@ -781,14 +781,14 @@ const FindJob = () => {
     try {
       setSavingJobId(id);
       setMessage("Saving job...");
-      setToastType("info")
+      setToastType("info");
 
       await savedJob(id).unwrap();
 
       setMessage(
         "Job saved successfully"
       );
-      setToastType("success")
+      setToastType("success");
     } catch (error) {
       setMessage(
         error?.data?.message ||
