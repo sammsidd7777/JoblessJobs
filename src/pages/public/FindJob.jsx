@@ -209,6 +209,7 @@ const FindJob = () => {
   ======================================================= */
 
   const [message, setMessage] = useState("");
+  const [toastType,setToastType] =useState("");
   const [showCursor, setShowCursor] =
     useState(true);
 
@@ -780,17 +781,20 @@ const FindJob = () => {
     try {
       setSavingJobId(id);
       setMessage("Saving job...");
+      setToastType("info")
 
       await savedJob(id).unwrap();
 
       setMessage(
         "Job saved successfully"
       );
+      setToastType("success")
     } catch (error) {
       setMessage(
         error?.data?.message ||
         "Please login to save this job"
       );
+      setToastType("error")
     } finally {
       setSavingJobId(null);
     }
@@ -990,6 +994,7 @@ const FindJob = () => {
       {message && (
         <NotificationToasty
           message={message}
+            type={toastType}
         />
       )}
 
