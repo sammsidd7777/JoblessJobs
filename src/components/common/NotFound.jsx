@@ -28,13 +28,13 @@ const NotFound = () => {
 
           {/* Heading */}
           <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">
-            Oops! This page doesn't exist.
+           Arre yaar, ye job toh mil hi nahi rahi! 😅 <br/>
+           Chalo, kuch real jobs dhundhte hain.
           </h1>
 
           {/* Description */}
           <p className="mx-auto mt-3 max-w-md text-sm leading-6 text-slate-500 sm:text-base dark:text-slate-400">
-            The page you're looking for may have been removed, renamed, or
-            the link might be incorrect.
+            Lagta hai ye page bhi interview ke baad ghost kar gaya.
           </p>
 
           {/* Actions */}
