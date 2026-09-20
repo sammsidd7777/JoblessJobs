@@ -29,7 +29,7 @@ const NotFound = () => {
           {/* Heading */}
           <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">
            Arre yaar, ye job toh mil hi nahi rahi! 😅 <br/>
-           Chalo, kuch real jobs dhundhte hain.
+           Chalo, kuch real jobs dhundhte hain..
           </h1>
 
           {/* Description */}
