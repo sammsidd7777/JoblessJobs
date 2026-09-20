@@ -2275,14 +2275,12 @@ const handleSaveJob = async (id) => {
                   </div>
 
                   <h3 className="text-xl font-semibold text-[#F5F2EA]">
-                    No jobs found
+                   Arre yaar, ye job toh mil hi nahi rahi! 😅
                   </h3>
 
                   <p className="mt-2 max-w-sm text-sm leading-6 text-[#6B6963]">
-                    We couldn't find jobs
-                    matching your current
-                    filters. Try broadening
-                    your search.
+                   Lagta hai ye page bhi interview ke baad ghost kar gaya.
+Chalo, kuch real jobs dhundhte hain.
                   </p>
 
                   <button
